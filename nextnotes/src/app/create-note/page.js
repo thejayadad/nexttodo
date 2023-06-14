@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import Axios from 'axios'
 
 
-const Createnotes = () => {
+export default function Createnotes(){
   const [title, setTitle] = useState('');
   const [todo, setTodo] = useState('')
 
@@ -25,10 +25,8 @@ const Createnotes = () => {
    <section>
     <h2>Create Notes</h2>
     <form onSubmit={handleSubmit}>
-    <label for="title">Title</label>
         <input
           type="text"
-          id="title"
           required
           onChange={(event)=>setTitle(event.target.value)}
         />
@@ -36,7 +34,6 @@ const Createnotes = () => {
         type='text'
         onChange={(event)=>setTodo(event.target.value)}
         required
-        id="todo"
         />
         <button type="submit">Create</button>
       </form>
@@ -44,4 +41,3 @@ const Createnotes = () => {
   )
 }
 
-export default Createnotes
