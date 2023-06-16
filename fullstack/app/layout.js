@@ -15,7 +15,10 @@ export default function RootLayout({ children }) {
    <body>
 
 <Navbar />
+<section className='cursor-pointer container mx-auto'>
+
  {children}
+ </section>
 </body>
    </Provider>
     </html>
