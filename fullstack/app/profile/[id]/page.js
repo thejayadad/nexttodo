@@ -8,6 +8,8 @@ import ThoughtCard from "@/components/ThoughtCard";
 const ProfilePage = ({ params }) => {
 const { data: session } = useSession();
 const [userThought, setUserThought] = useState([]);
+const [upvoteState, setUpvoteState] = useState(false);
+
 
 
 
