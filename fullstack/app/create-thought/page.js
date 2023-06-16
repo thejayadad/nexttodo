@@ -4,6 +4,8 @@ import { getServerSession } from "next-auth/next";
 import { submitThought } from '@/utils/actions';
 import { redirect } from "next/navigation";
 
+import { authOptions } from '../api/auth/[...nextauth]';
+
 const CreateThought = () => {
     const CreateThought = async (formData) => {
         "use server";
@@ -33,7 +35,7 @@ const CreateThought = () => {
          </div>
          <div>
          <textarea 
-            name='thought' 
+            name='tags' 
             placeholder='Tell us whats on your Mind?'
             id='tags'
             required
