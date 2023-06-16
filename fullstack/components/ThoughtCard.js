@@ -43,7 +43,7 @@ const ThoughtCard = ({
   };
 
   return (
-    <div>
+    <div className='h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative'>
     <div>
       <h2>{thought}</h2>
       <p>{tags}</p>

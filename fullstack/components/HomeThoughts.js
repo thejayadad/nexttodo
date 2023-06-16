@@ -43,7 +43,7 @@ const HomeThoughts = () => {
     );
   };
   return (
-    <section>
+    <section className="text-gray-600 body-font px-5 py-24 mx-auto">
       <h2>Home Thoughts</h2>
       <div>
       <form>
@@ -57,19 +57,24 @@ const HomeThoughts = () => {
         ></input>
       </form>
 
-      <div>
+      <div className="flex flex-wrap">
         {searchText
           ? searchedResults.map((singleThought) => (
+            <div className="p-4 lg:w-1/3">
+
               <ThoughtCard
                 {...singleThought}
                 setUpvoteState={setUpvoteState}
               ></ThoughtCard>
+              </div>
             ))
           : allThoughts.map((singleThought) => (
+              <div className="p-4 lg:w-1/3">
               <ThoughtCard
                 {...singleThought}
                 setUpvoteState={setUpvoteState}
               ></ThoughtCard>
+              </div>
             ))}
       </div>
       </div>
