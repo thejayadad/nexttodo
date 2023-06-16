@@ -1,6 +1,7 @@
   'use client'
   
-  import Thought from '@/components/Thought'
+import HomeThoughts from '@/components/HomeThoughts';
+  import Thought from '@/components/HomeThoughts'
   import { useSession } from "next-auth/react";
 
 
@@ -15,7 +16,7 @@
         {
           session?.user.id ? (
     
-            <Thought />
+            <HomeThoughts />
           
           ) : (
             <>
